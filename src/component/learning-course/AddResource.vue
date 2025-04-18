@@ -37,15 +37,10 @@ export default {
 };
 </script>
 <template>
-  <base-dialog v-if="inputIsInvalid" title="Uyarı">
+  <base-dialog v-if="inputIsInvalid" title="Warning">
     <template #default>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur ea
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, iure
-        natus suscipit nam quam nulla, perferendis iste ab ex soluta asperiores
-        pariatur unde enim dicta, omnis quisquam reiciendis magnam officiis?
+        <strong>Please fill in the relevant fields</strong>
       </p>
     </template>
 
@@ -53,6 +48,8 @@ export default {
       <base-button mode="flat" @click="errorControl()">Confirm</base-button>
     </template>
   </base-dialog>
+
+
 
   <base-card>
     <form @submit.prevent="addNewResources">
@@ -62,15 +59,10 @@ export default {
       </div>
       <div class="form-control">
         <label for="description">Description</label>
-        <textarea
-          id="description"
-          name=""
-          rows="3"
-          ref="newDescription"
-        ></textarea>
+        <textarea id="description" name="" rows="3" ref="newDescription"></textarea>
       </div>
       <div class="form-control">
-        <label for="link">link</label>
+        <label for="link">Link</label>
         <input type="url" name="link" id="link" v-model="newLink" />
       </div>
       <div>
@@ -82,6 +74,7 @@ export default {
 
 <style scoped>
 label {
+  color: #ff0000;
   font-weight: bold;
   display: block;
   margin-bottom: 0.5rem;
@@ -93,7 +86,9 @@ textarea {
   width: 100%;
   font: inherit;
   padding: 0.15rem;
-  border: 1px solid #ccc;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-weight: 600;
 }
 
 input:focus,

@@ -23,9 +23,12 @@ button {
   cursor: pointer;
   font-family: sans-serif;
   margin: 0px 5px;
+  font-weight: bolder;
 }
+
 button:hover {
   background-color: rgb(255, 1, 1);
   color: white;
+  transform: scale(1.05);
 }
 </style>

@@ -8,19 +8,21 @@ export default {
 </script>
 
 <template>
-  <dialog open="true">
-    <header>
-      <slot name="header">
-        <h2>{{ title }}</h2>
-      </slot>
-    </header>
-    <section>
-      <slot></slot>
-    </section>
-    <menu>
-      <slot name="actions"> </slot>
-    </menu>
-  </dialog>
+  <div>
+    <dialog open="true">
+      <header>
+        <slot name="header">
+          <h2>{{ title }}</h2>
+        </slot>
+      </header>
+      <section>
+        <slot></slot>
+      </section>
+      <menu>
+        <slot name="actions"> </slot>
+      </menu>
+    </dialog>
+  </div>
 </template>
 
 <style scoped>
@@ -42,12 +44,12 @@ div {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.75);
   z-index: 10;
-  
+
 }
 
 dialog {
   position: fixed;
-  top: 20vh;
+  top: 25vh;
   left: 10%;
   width: 80%;
   z-index: 100;
@@ -57,10 +59,16 @@ dialog {
   padding: 0;
   margin: 0;
   overflow: hidden;
+
+}
+
+dialog:hover {
+  transform: scale(1.09);
+  transition: 1.4s;
 }
 
 header {
-  background-color: #ff0000;
+  background-color: #daa700;
   color: white;
   width: 100%;
   padding: 1rem;

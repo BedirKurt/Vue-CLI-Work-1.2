@@ -104,4 +104,10 @@ export default {
   cursor: pointer;
   font-family: sans-serif;
 }
+
+.flat:hover{
+  background-color: rgba(0, 0, 0, 0.322);
+  transform: scale(1.05);
+  transition: 1.2s;
+}
 </style>

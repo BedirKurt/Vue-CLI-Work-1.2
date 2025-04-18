@@ -14,7 +14,7 @@ export default {
 
 <template>
   <div>
-    <the-header title="Remember"></the-header>
+    <the-header title="Source Lists"></the-header>
     <TheResources></TheResources>
   </div>
 </template>

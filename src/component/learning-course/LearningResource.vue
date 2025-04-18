@@ -10,24 +10,21 @@ export default {
 </script>
 
 <template>
-  <base-card>
-    <header>
-      <h3>{{ title }}</h3>
-      <base-button mode="flat" @click="deleteResource(id)">Delete</base-button>
-    </header>
-    <p>{{ description }}</p>
-    <nav>
-      <a :href="link">View Resource</a>
-    </nav>
-  </base-card>
+  <div class="resource-card">
+    <base-card>
+      <header>
+        <h3>{{ title }}</h3>
+        <base-button mode="flat" @click="deleteResource(id)">Delete</base-button>
+      </header>
+      <p>{{ description }}</p>
+      <nav>
+        <a :href="link">View Resource</a>
+      </nav>
+    </base-card>
+  </div>
 </template>
 
 <style scoped>
-li {
-  margin: auto;
-  max-width: 40rem;
-}
-
 header {
   display: flex;
   justify-content: space-between;
@@ -51,5 +48,10 @@ a {
 a:hover,
 a:active {
   color: #e97c7c;
+}
+
+.resource-card:hover{
+  transform: scale(1.05);
+  transition: 1.2s;
 }
 </style>
