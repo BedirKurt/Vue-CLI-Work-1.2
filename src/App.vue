@@ -1,36 +1,21 @@
 <script>
-import StoredResources from './component/learning-course/StoredResources.vue';
+import TheResources from './component/learning-course/TheResources.vue';
 
 export default {
   components: {
-    StoredResources,
+    TheResources,
   },
   data() {
-    return {
-      storedResources: [
-        {
-          id: 'official-guide',
-          title: 'Offical Guide',
-          description: 'The offical Vue.js domentation',
-          link: 'https://vuejs.org/guide/introduction.html',
-        },
-        {
-          id: 'google',
-          title: 'Google',
-          description: 'Learn to google. ',
-          link: 'https://www.google.com',
-        },
-      ],
-    };
+    return {};
   },
   methods: {},
 };
 </script>
 
 <template>
-  <the-header title="Remember Me"></the-header>
   <div>
-    <StoredResources :resources="storedResources"> </StoredResources>
+    <the-header title="Remember"></the-header>
+    <TheResources></TheResources>
   </div>
 </template>
 

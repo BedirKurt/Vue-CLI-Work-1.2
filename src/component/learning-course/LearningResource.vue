@@ -1,6 +1,7 @@
 <script>
 export default {
-  props: ['title', 'description', 'link'],
+  props: ['id', 'title', 'description', 'link'],
+  inject: ['deleteResource'],
   data() {
     return {};
   },
@@ -12,7 +13,7 @@ export default {
   <base-card>
     <header>
       <h3>{{ title }}</h3>
-      <base-button mode="flat">Delete</base-button>
+      <base-button mode="flat" @click="deleteResource(id)">Delete</base-button>
     </header>
     <p>{{ description }}</p>
     <nav>
@@ -51,29 +52,4 @@ a:hover,
 a:active {
   color: #e97c7c;
 }
-
-button {
-  background-color: rgb(228, 0, 114);
-  color: white;
-  border: none;
-  padding: 5px 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-family: sans-serif;
-}
-button:hover {
-  background-color: rgb(255, 1, 1);
-}
-
-.flat{
-  background-color: black;
-  color: white;
-  border: none;
-  padding: 5px 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-family: sans-serif;
-
-}
-
 </style>
